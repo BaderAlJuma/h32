@@ -11,17 +11,20 @@ namespace h32.Controllers
         
         public IActionResult Index()
         {
-            var cities = new List<string>(){
-                        "New York",
-                        "London",
-                        "Mumbai",
-                        "Chicago"
-                    };
+            
             
                 
             
+            return View();
+        }
+        public IActionResult AddItem()
+        {
+            var cities = new Cart();
+
+
+
+
             return View(cities);
         }
-
     }
 }

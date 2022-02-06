@@ -2,8 +2,10 @@
 {
     public class Cart
     {
-        public string? Name { get; set; }
-        public decimal Price { get; set; }
+
+        public List<string> Names{ get; set; }
+
+    public decimal Price { get; set; }
 
     }
 }
