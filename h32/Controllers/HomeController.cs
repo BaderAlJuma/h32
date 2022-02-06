@@ -26,7 +26,7 @@ namespace h32.Controllers
         {
             return View();
         }
-        public IActionResult AddItem()
+        public IActionResult Add()
         {
 
             return View();
