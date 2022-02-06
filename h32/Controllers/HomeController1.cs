@@ -1,26 +1,27 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using h32.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 
-namespace H3.Controllers
+namespace h32.Controllers
 {
     public class HomeController1 : Controller
     {
         // 
         // GET: /HelloWorld/
-
+        
         public IActionResult Index()
         {
-            return View();
+            var cities = new List<string>(){
+                        "New York",
+                        "London",
+                        "Mumbai",
+                        "Chicago"
+                    };
+            
+                
+            
+            return View(cities);
         }
 
-        // GET: /HelloWorld/Welcome/ 
-        // Requires using System.Text.Encodings.Web;
-        public IActionResult Welcome(string name, int numTimes = 1)
-        {
-            ViewData["Message"] = "Hello " + name;
-            ViewData["NumTimes"] = numTimes;
-
-            return View();
-        }
     }
 }
