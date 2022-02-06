@@ -10,6 +10,10 @@ namespace h32.Data
 {
     public class h32Context : DbContext
     {
+        public h32Context()
+        {
+        }
+
         public h32Context (DbContextOptions<h32Context> options)
             : base(options)
         {
