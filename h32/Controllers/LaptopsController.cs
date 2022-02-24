@@ -43,7 +43,22 @@ namespace h32.Controllers
 
             return View(laptop);
         }
+        public async Task<IActionResult> Confirm(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            ViewData["rnd"] = new Random().Next();
+            var laptop = await _context.Laptop
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (laptop == null)
+            {
+                return NotFound();
+            }
 
+            return View(laptop);
+        }
         // GET: Laptops/Create
         public IActionResult Create()
         {

@@ -12,4 +12,4 @@ namespace h32.Models
 
         public decimal Price { get; set; }
     }
-}
+} 
