@@ -20,6 +20,7 @@ namespace h32.Controllers
             _context = context;
         }
 
+        
         // GET: Laptops
         public async Task<IActionResult> Index()
         {

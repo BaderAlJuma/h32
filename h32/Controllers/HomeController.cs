@@ -12,11 +12,8 @@ namespace h32.Controllers
         h32Context cxt = new h32Context();
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+        
+       
         public IActionResult Index()
         {
             return View();
@@ -28,7 +25,6 @@ namespace h32.Controllers
         }
         public IActionResult Add()
         {
-
             return View();
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
